@@ -30,6 +30,7 @@ public class Arabic extends Number {
                 break;
 
             case ("/"):
+
                 System.out.println(a / b);
                 break;
             case ("*"):

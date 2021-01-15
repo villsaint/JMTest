@@ -10,7 +10,6 @@ public class Rome extends Number {
     private int b;
 
 
-
     public Rome(String[] s) {
         this.arg = s;
     }
@@ -104,13 +103,15 @@ public class Rome extends Number {
         Map<Integer, String> map10 = zapolnenie10();
         Map<Integer, String> map1 = mapVivod();
 
-        int cel = result / 10;
-        int ost = result % 10;
+        int cel = Math.abs(result / 10);
+        int ost = Math.abs(result % 10);
 
 
         String stroka = "";
+        if (result < 0) stroka += "-";
         if (cel > 0) stroka += map10.get(cel);
         if (ost > 0) stroka += map1.get(ost);
+        if (result == 0) System.out.println("N");
         System.out.println(stroka);
 
 
